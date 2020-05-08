@@ -1,4 +1,4 @@
 ---
 applications:
  - name: kareemahmed-getstartednode-active-toucan-uk
-   memory: 128M
+   memory: 64M
