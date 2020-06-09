@@ -9,10 +9,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
+
+// Because the MongoDB and Cloudant use different API commands, we
+// have to check which command should be used based on the database
+// vendor.
+
 let mydb, cloudant;
-var vendor; // Because the MongoDB and Cloudant use different API commands, we
-            // have to check which command should be used based on the database
-            // vendor.
+var vendor; 
 var dbName = 'mydb';
 
 // Separate functions are provided for inserting/retrieving content from
